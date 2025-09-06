@@ -972,6 +972,9 @@ def blog():
             got_job_at_branchlogic = True
     return render_template('blog.html', got_job_at_branchlogic=got_job_at_branchlogic)
 
+@app.route('/about')
+def about_us():
+    return render_template('about.html')
 
 if __name__ == '__main__':
     with app.app_context():
@@ -984,8 +987,7 @@ if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=port)
 
 
-@app.route('/about')
-def about_us():
-    return render_template('about.html')
+
+
 
 
